@@ -19,7 +19,7 @@
         <div ng-controller="nameController as settings">
             <input type="button" ng-click = "settings.addName(fname)" value="go">   
              <ul>
-                <li ng-repeat="li in settings.names">{{li}}</li>     
+                <li ng-repeat  ="li in settings.names track by $index"  >{{li}}</li>     
             </ul>
         </div>
     </body> 
