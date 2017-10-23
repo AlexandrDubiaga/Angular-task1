@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app = "app">
+    <head>
+        <script src="./lib/angular/angular.min.js"></script> 
+        <script src="./main.js"></script>       
+    </head>
+    <body>
+        <div ng-init = "text = 'Hosting max'">
+            {{text}}
+        </div>
+        <div ng-init = "list = ['Hosting','max','sensor']"></div>
+            <div>
+                <input ng-model="searchList" type="text" name="name">                    
+            </div>
+            <div>
+                <ul>
+                    <li ng-repeat="li in list | filter:searchList">{{li}}</li>
+                </ul>     
+        </div>
+    </body> 
+</html>
